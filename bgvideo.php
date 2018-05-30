@@ -3,9 +3,9 @@
 Plugin Name: Background Video
 Plugin URI: http://premium.wpmudev.org/
 Description: Background Video
-Author: Chris Knowles
-Version: 1.0
-Author URI: http://twitter.com/ChrisKnowles
+Author: Monti Design (orig. Chris Knowles)
+Version: 1.1
+Author URI: http://montidesign.com
 */
 
 /*
