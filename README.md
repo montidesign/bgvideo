@@ -13,7 +13,7 @@ So instead of rendering the bgvideo html like this:
 
 ```html
 <div class="bgvideo-wrapper">
-  <video id="bgVideo" preload="none" muted="" autoplay="" loop="" class="bgvideo">
+  <video id="bgVideo" preload="none" muted autoplay loop class="bgvideo">
     <source src="https://domain.com/urlforvideo.mp4" type="video/mp4">
   </video>
 </div>
