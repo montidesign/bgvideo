@@ -21,7 +21,7 @@ jQuery(document).ready(function(){
 				myVideo.pause();
 			}
 			
-			//jQuery('.taptoplay').hide();
+			jQuery('.taptoplay').hide();
 		
 		});
 				
@@ -31,31 +31,35 @@ jQuery(document).ready(function(){
 
 function buildBgVideoHtml(){
 
-	var bgvhtml = '<div class="bgvideo-wrapper"><video id="bgVideo" preload="none" ';
-
-	if (bgvideo.muted == 'muted') bgvhtml = bgvhtml.concat(' muted');
-
-	if (bgvideo.autoplay == 'autoplay') bgvhtml = bgvhtml.concat(' autoplay');
+	var bgvhtml = '<div class="bgvideo-wrapper"><video id="bgVideo" ';
 	
-	if (bgvideo.loop == 'loop') bgvhtml = bgvhtml.concat(' loop');	
-
+	if (bgvideo.mp4) {
+		bgvhtml = bgvhtml.concat('type="video/mp4" src="', bgvideo.mp4, '"');
+	}
+	
 	if (bgvideo.poster) {
 		bgvhtml = bgvhtml.concat(' poster="', bgvideo.poster, '"');
-	}	
+	}
+
+	if (bgvideo.muted == 'muted') bgvhtml = bgvhtml.concat(' muted="true" ');
+
+	if (bgvideo.autoplay == 'autoplay') bgvhtml = bgvhtml.concat(' autoplay="true" ');
+	
+	if (bgvideo.loop == 'loop') bgvhtml = bgvhtml.concat(' loop="true" ');
+	
+	if (bgvideo.playsinline == 'playsinline') bgvhtml = bgvhtml.concat(' playsinline="true" ');
 
 	bgvhtml = bgvhtml.concat(' class="bgvideo">');
 
-	if (bgvideo.mp4) {
-		bgvhtml = bgvhtml.concat('<source src="', bgvideo.mp4, '" type="video/mp4"/>');
-	}	
-
-	if (bgvideo.webm) {
-		bgvhtml = bgvhtml.concat('<source src="', bgvideo.webm, '" type="video/webm"/>');
-	}
 	
-	if (bgvideo.ogg) {
-		bgvhtml = bgvhtml.concat('<source src="', bgvideo.ogg, '" type="video/ogg"/>');
-	}			
+
+	//if (bgvideo.webm) {
+	//	bgvhtml = bgvhtml.concat('<source src="', bgvideo.webm, '" type="video/webm"/>');
+	//}
+	
+	//if (bgvideo.ogg) {
+	//	bgvhtml = bgvhtml.concat('<source src="', bgvideo.ogg, '" type="video/ogg"/>');
+	//}			
 		
 	bgvhtml = bgvhtml.concat('</video></div>');
 
