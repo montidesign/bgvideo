@@ -7,7 +7,7 @@ The original version has developed some compatibility issues with mobile, partic
 
 The __`<source>`__ tag is unnecessary since the web has coalesced around the mp4 video format. This version of the bgvideo plugin removes the __`<source>`__ child element and instead uses a src attribute on the __`<video>`__ tag itself. CSS hooks like IDs and classes remain untouched, so the plugin will function the same as before.
 
-The autoplay, looped, and muted attributes are rendered with their full boolean values (e.g., autoplay="true"), and an attribute for playsinline has also been added.
+The autoplay, loop, and muted attributes are rendered with their full boolean values (e.g., autoplay="true"), and an attribute for playsinline has also been added.
 
 So instead of rendering the bgvideo html like this:
 
