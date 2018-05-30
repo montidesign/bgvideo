@@ -27,6 +27,6 @@ It now looks like this:
 </div>
 ```
 
-To use the plugin in a manner that ensure compatibility with iOS on small screens, simply add a shortcode to your content, like so:
+To use the plugin in a manner that ensures compatibility with iOS on small screens, simply add a shortcode within the WordPress content editor, like so:
 
 [bgvideo mp4="https://domain.com/urlforvideo.mp4" poster="https://domain.com/urlforposter.jpg" autoplay muted loop playsinline]
